@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Dunkin' Rewards</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complete Your Registration | $100 Dunkin’ Offer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --accent: #ff671f;
-      --pink: #da1884;
-      --dunkin-orange: #f58220;
-      --dunkin-pink: #e11383;
-      --dark: #111111;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #fde6da;
-      --shadow: 0 18px 40px rgba(15, 23, 42, .12);
-      --soft: 0 6px 18px rgba(15, 23, 42, .06);
+      --bg: #fff4ec;
+      --fg: #2b1a12;
+      --muted: #6f5a4f;
+      --pink: #e11383;
+      --orange: #ff6b00;
+      --card: #fff;
+      --line: #f3d9c9;
     }
 
     * {
@@ -24,377 +24,213 @@
       padding: 0;
     }
 
-    html, body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background:
-        radial-gradient(ellipse at top, rgba(255, 103, 31, 0.32) 0%, transparent 55%),
-        radial-gradient(ellipse at bottom right, rgba(88, 28, 135, 0.22) 0%, transparent 50%),
-        linear-gradient(180deg, #1a0f0a 0%, #2d1b12 45%, #1a0f0a 100%);
-      color: var(--text);
+    body {
+      font-family: 'Nunito', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      padding: 20px 16px;
       min-height: 100vh;
-      overflow-x: hidden;
-      position: relative;
     }
 
-    /* Floating Halloween elements */
-    .halloween-bg {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-    }
-
-    .bat {
-      position: absolute;
-      font-size: 22px;
-      opacity: 0.35;
-      animation: floatBat 12s ease-in-out infinite;
-    }
-
-    .bat:nth-child(1) { top: 8%; left: 6%; animation-delay: 0s; }
-    .bat:nth-child(2) { top: 18%; right: 8%; animation-delay: 2s; font-size: 18px; }
-    .bat:nth-child(3) { top: 55%; left: 4%; animation-delay: 4s; font-size: 20px; }
-    .bat:nth-child(4) { top: 70%; right: 5%; animation-delay: 1s; font-size: 16px; }
-    .bat:nth-child(5) { top: 35%; left: 12%; animation-delay: 3s; font-size: 14px; opacity: 0.25; }
-
-    @keyframes floatBat {
-      0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
-      25% { transform: translateY(-18px) translateX(12px) rotate(5deg); }
-      50% { transform: translateY(8px) translateX(-8px) rotate(-4deg); }
-      75% { transform: translateY(-12px) translateX(6px) rotate(3deg); }
-    }
-
-    .glow {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(40px);
-      opacity: 0.25;
-      animation: pulseGlow 6s ease-in-out infinite;
-    }
-
-    .glow-1 {
-      width: 180px; height: 180px;
-      background: #ff671f;
-      top: -40px; left: -40px;
-    }
-
-    .glow-2 {
-      width: 140px; height: 140px;
-      background: #7c3aed;
-      bottom: 10%; right: -30px;
-      animation-delay: 2s;
-    }
-
-    .glow-3 {
-      width: 100px; height: 100px;
-      background: #f97316;
-      top: 40%; left: -20px;
-      animation-delay: 4s;
-    }
-
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 0.2; transform: scale(1); }
-      50% { opacity: 0.35; transform: scale(1.15); }
-    }
-
-    .wrap {
-      padding: 24px 12px 32px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .container {
-      max-width: 430px;
+    .panel {
+      max-width: 640px;
       margin: 0 auto;
-      background: rgba(255, 255, 255, 0.97);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 140, 50, 0.3);
+      background: var(--card);
       border-radius: 24px;
-      box-shadow: 
-        0 20px 50px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(255, 103, 31, 0.15);
-      padding: 28px 20px 22px;
+      padding: 32px 22px;
+      box-shadow: rgba(225, 19, 131, 0.25) 0px 20px 50px -20px;
+    }
+
+    header {
       text-align: center;
     }
 
-    /* Dunkin' Donuts Logo */
-    .logo {
-      margin-bottom: 22px;
-      line-height: 0.9;
+    .brand {
+      font-size: 2.2rem;
       font-weight: 900;
+      color: var(--pink);
       letter-spacing: -0.5px;
-      text-transform: uppercase;
-      font-family: Arial Black, Arial, Helvetica, sans-serif;
     }
 
-    .logo .top {
-      display: block;
-      font-size: 32px;
-      color: var(--dunkin-orange);
-      letter-spacing: 1px;
-    }
-
-    .logo .bottom {
-      display: block;
-      font-size: 32px;
-      color: var(--dunkin-pink);
-      letter-spacing: 0.5px;
-      position: relative;
-    }
-
-    .logo .bottom .o {
-      position: relative;
-      display: inline-block;
-    }
-
-    .logo .bottom .o::after {
-      content: "";
-      position: absolute;
-      width: 9px;
-      height: 9px;
-      background: #fff;
-      border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    .divider {
+      height: 5px;
+      width: 90px;
+      margin: 16px auto 0;
+      border-radius: 9px;
+      background: linear-gradient(90deg, var(--orange), var(--pink));
     }
 
     h1 {
-      font-size: 28px;
-      line-height: 1.1;
-      margin: 0 0 10px;
+      margin-top: 28px;
+      font-size: 2rem;
       font-weight: 900;
-      letter-spacing: -.03em;
-      color: var(--dark);
+      line-height: 1.08;
     }
 
-    .sub {
-      font-size: 13px;
-      line-height: 1.5;
+    .lead {
+      margin-top: 16px;
       color: var(--muted);
-      margin: 0 0 20px;
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
 
-    .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    ol {
+      list-style: none;
+      margin-top: 30px;
+      display: grid;
+      gap: 14px;
     }
 
-    .step {
+    li.step {
       display: flex;
-      gap: 12px;
-      padding: 13px 14px;
-      border-radius: 16px;
-      border: 1px solid #fde6da;
-      background: linear-gradient(180deg, #ffffff 0%, #fff8f3 100%);
-      text-align: left;
       align-items: center;
-      box-shadow: var(--soft);
+      gap: 16px;
+      padding: 16px 18px;
+      border: 2px solid var(--line);
+      border-radius: 16px;
+      font-weight: 700;
     }
 
     .num {
-      width: 30px;
-      height: 30px;
+      flex: 0 0 auto;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      font-weight: 900;
-      color: #fff;
-      background: linear-gradient(180deg, #ff671f, #d94e0c);
-      flex: 0 0 30px;
-    }
-
-    .step b {
-      font-size: 13px;
-      line-height: 1.35;
+      display: grid;
+      place-items: center;
       font-weight: 800;
-      color: #111827;
+      font-size: 1.1rem;
+      color: #fff;
+      background: linear-gradient(135deg, var(--orange), var(--pink));
     }
 
-    .btn {
-      width: 100%;
-      height: 54px;
-      margin-top: 18px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .cta-wrap {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .cta {
+      display: block;
+      padding: 18px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--orange), var(--pink));
       color: #fff;
-      font-weight: 900;
-      font-size: 14px;
-      letter-spacing: .08em;
-      background: linear-gradient(180deg, #ff671f, #d94e0c);
       text-decoration: none;
-      box-shadow: 0 14px 28px rgba(255, 103, 31, .35);
-      transition: .2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 32px rgba(255, 103, 31, .45);
-    }
-
-    .fineprint {
-      font-size: 11px;
-      line-height: 1.45;
-      color: var(--muted);
-      margin-top: 12px;
-    }
-
-    .faq-title {
-      margin: 24px 0 12px;
-      font-size: 17px;
-      font-weight: 900;
-      text-align: left;
-      color: var(--dark);
-      letter-spacing: -.02em;
-    }
-
-    .faq {
-      border: 1px solid #fde6da;
-      border-radius: 18px;
-      overflow: hidden;
-      background: #fff;
-    }
-
-    .faq-item + .faq-item {
-      border-top: 1px solid #fde6da;
-    }
-
-    .faq-q {
-      padding: 15px 16px;
-      font-size: 13px;
       font-weight: 800;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      border: none;
-      background: none;
-      text-align: left;
-      color: #111827;
+      font-size: 1.15rem;
+      letter-spacing: 0.05em;
+      box-shadow: 0 12px 24px -10px var(--pink);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .faq-a {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .25s ease;
-      padding: 0 16px;
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 28px -10px var(--pink);
     }
 
-    .faq-a p {
-      font-size: 12px;
-      line-height: 1.5;
+    .note {
+      margin-top: 14px;
       color: var(--muted);
-      padding-bottom: 14px;
-      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
     }
 
-    .faq-item.open .faq-a {
-      max-height: 180px;
+    h2 {
+      margin-top: 40px;
+      font-size: 1.5rem;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    details {
+      margin-top: 12px;
+      border: 2px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::before {
+      content: "▶";
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 0.75em;
+      transition: transform 0.2s ease;
+    }
+
+    details[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    details p {
+      margin-top: 10px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    @media (min-width: 640px) {
+      .panel {
+        padding: 44px 40px;
+      }
+      h1 {
+        font-size: 2.4rem;
+      }
     }
   </style>
 </head>
 <body>
+  <main>
+    <article class="panel">
+      <header>
+        <p class="brand">DUNKIN’</p>
+        <div class="divider"></div>
+        <h1>Complete Your Registration</h1>
+        <p class="lead">Follow these simple steps to complete your registration for the $100 Dunkin’ offer.</p>
+      </header>
 
-  <!-- Halloween background effects -->
-  <div class="halloween-bg">
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
-    <div class="glow glow-3"></div>
-    <div class="bat">🦇</div>
-    <div class="bat">🦇</div>
-    <div class="bat">🦇</div>
-    <div class="bat">🦇</div>
-    <div class="bat">🦇</div>
-  </div>
+      <ol>
+        <li class="step"><span class="num">1</span>Click on “Claim Now”</li>
+        <li class="step"><span class="num">2</span>Enter your email and basic information</li>
+        <li class="step"><span class="num">3</span>Complete 4–6 sponsored deals</li>
+        <li class="step"><span class="num">4</span>Get your exclusive offer</li>
+      </ol>
 
-  <div class="wrap">
-    <div class="container">
-
-      <!-- Dunkin' Donuts Logo -->
-      <div class="logo">
-        <span class="top">DUNKIN'</span>
-        <span class="bottom">
-          D<span class="o">O</span>NUTS
-        </span>
+      <div class="cta-wrap">
+        <a class="cta" href="https://giftclick.org/aff_c?offer_id=1765&aff_id=145283" rel="nofollow sponsored">CLAIM NOW</a>
+        <p class="note">Eligibility and offer requirements apply. Review the full terms before participating.</p>
       </div>
 
-      <h1>Complete Your Registration</h1>
+      <h2>Frequently Asked Questions</h2>
 
-      <p class="sub">
-        Follow these simple steps to complete your registration and access your exclusive offer.
-      </p>
+      <details>
+        <summary>How long does it take?</summary>
+        <p>Completion and processing times depend on the sponsored deals selected and the offer’s verification requirements.</p>
+      </details>
 
-      <div class="steps">
-        <div class="step">
-          <div class="num">1</div>
-          <b>Click on "Claim Now"</b>
-        </div>
-        <div class="step">
-          <div class="num">2</div>
-          <b>Enter your email and basic information</b>
-        </div>
-        <div class="step">
-          <div class="num">3</div>
-          <b>Complete 4–6 sponsored deals</b>
-        </div>
-        <div class="step">
-          <div class="num">4</div>
-          <b>Enjoy your exclusive offer</b>
-        </div>
-      </div>
+      <details>
+        <summary>What are sponsored deals?</summary>
+        <p>Sponsored deals are advertiser offers that may include registrations, purchases, or subscriptions. Check each deal’s terms and any costs before completing it.</p>
+      </details>
 
-      <a class="btn" href="https://giftclick.org/aff_c?offer_id=1765&aff_id=145283">CLAIM NOW</a>
+      <details>
+        <summary>How many offers do I complete?</summary>
+        <p>Follow the required number of sponsored deals listed on the offer page.</p>
+      </details>
 
-      <div class="fineprint">
-        By clicking "Claim Now", you agree to complete the required steps shown to access your offer.
-      </div>
-
-      <div class="faq-title">Frequently Asked Questions</div>
-
-      <div class="faq">
-        <div class="faq-item">
-          <button class="faq-q">How long does it take?</button>
-          <div class="faq-a">
-            <p>Most users finish within a few minutes depending on the available offers.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">What are sponsored deals?</button>
-          <div class="faq-a">
-            <p>These are random tasks to test like apps/games, surveys, filling out forms.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">How many offers do I complete?</button>
-          <div class="faq-a">
-            <p>Typically between 4–6 offers depending on eligibility requirements.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">When is access processed?</button>
-          <div class="faq-a">
-            <p>Processing times may vary, but most users receive confirmation within 24–48 hours.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <script>
-    document.querySelectorAll(".faq-item").forEach(item => {
-      const btn = item.querySelector(".faq-q");
-      btn.addEventListener("click", () => {
-        item.classList.toggle("open");
-      });
-    });
-  </script>
+      <details>
+        <summary>When is my reward processed?</summary>
+        <p>Reward processing begins after the required steps have been completed and verified, subject to the offer’s terms.</p>
+      </details>
+    </article>
+  </main>
 </body>
 </html>
