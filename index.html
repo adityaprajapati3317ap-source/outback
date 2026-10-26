@@ -1,236 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Complete Your Registration | $100 Dunkin’ Offer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Your Registration – $500 Sam's Club Gift Card</title>
   <style>
-    :root {
-      --bg: #fff4ec;
-      --fg: #2b1a12;
-      --muted: #6f5a4f;
-      --pink: #e11383;
-      --orange: #ff6b00;
-      --card: #fff;
-      --line: #f3d9c9;
-    }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Nunito', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      padding: 20px 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
       min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 48px 20px;
     }
 
-    .panel {
-      max-width: 640px;
-      margin: 0 auto;
-      background: var(--card);
-      border-radius: 24px;
-      padding: 32px 22px;
-      box-shadow: rgba(225, 19, 131, 0.25) 0px 20px 50px -20px;
-    }
-
-    header {
+    .container {
+      width: 100%;
+      max-width: 480px;
       text-align: center;
     }
 
-    .brand {
-      font-size: 2.2rem;
-      font-weight: 900;
-      color: var(--pink);
+    /* Logo */
+    .logo-wrap {
+      margin-bottom: 28px;
+    }
+
+    .logo-icon {
+      width: 72px;
+      height: 56px;
+      margin: 0 auto 12px;
+      display: block;
+    }
+
+    .logo-text {
+      font-size: 28px;
+      font-weight: 700;
+      color: #0060a9;
       letter-spacing: -0.5px;
     }
 
-    .divider {
-      height: 5px;
-      width: 90px;
-      margin: 16px auto 0;
-      border-radius: 9px;
-      background: linear-gradient(90deg, var(--orange), var(--pink));
-    }
-
     h1 {
-      margin-top: 28px;
-      font-size: 2rem;
-      font-weight: 900;
-      line-height: 1.08;
+      font-size: 28px;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 12px;
+      line-height: 1.3;
     }
 
-    .lead {
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 1.05rem;
-      line-height: 1.7;
+    .subtitle {
+      font-size: 16px;
+      color: #718096;
+      line-height: 1.5;
+      margin-bottom: 32px;
+      padding: 0 10px;
     }
 
-    ol {
-      list-style: none;
-      margin-top: 30px;
-      display: grid;
-      gap: 14px;
+    /* Steps */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
     }
 
-    li.step {
+    .step {
       display: flex;
       align-items: center;
-      gap: 16px;
-      padding: 16px 18px;
-      border: 2px solid var(--line);
-      border-radius: 16px;
-      font-weight: 700;
+      gap: 14px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 50px;
+      padding: 14px 20px;
+      text-align: left;
     }
 
-    .num {
-      flex: 0 0 auto;
+    .step-num {
+      width: 28px;
+      height: 28px;
+      background: #0060a9;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-text {
+      font-size: 15px;
+      color: #2d3748;
+      font-weight: 500;
+    }
+
+    /* CTA Button */
+    .claim-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 56px;
+      background: #0060a9;
+      color: white;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: background 0.2s, transform 0.15s;
+      margin-bottom: 16px;
+    }
+
+    .claim-btn:hover {
+      background: #004d8c;
+      transform: translateY(-1px);
+    }
+
+    .disclaimer {
+      font-size: 13px;
+      color: #a0aec0;
+      line-height: 1.5;
+      margin-bottom: 36px;
+      padding: 0 8px;
+    }
+
+    /* Social proof */
+    .social-proof {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .avatars {
+      display: flex;
+      align-items: center;
+    }
+
+    .avatars img {
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-      font-size: 1.1rem;
-      color: #fff;
-      background: linear-gradient(135deg, var(--orange), var(--pink));
+      border: 2.5px solid #fff;
+      object-fit: cover;
+      margin-left: -10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
     }
 
-    .cta-wrap {
-      text-align: center;
-      margin-top: 24px;
+    .avatars img:first-child {
+      margin-left: 0;
     }
 
-    .cta {
-      display: block;
-      padding: 18px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--orange), var(--pink));
-      color: #fff;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 1.15rem;
-      letter-spacing: 0.05em;
-      box-shadow: 0 12px 24px -10px var(--pink);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 28px -10px var(--pink);
-    }
-
-    .note {
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-
-    h2 {
-      margin-top: 40px;
-      font-size: 1.5rem;
-      font-weight: 900;
-      text-align: center;
-    }
-
-    details {
-      margin-top: 12px;
-      border: 2px solid var(--line);
-      border-radius: 14px;
-      padding: 14px 16px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 800;
-      list-style: none;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    summary::before {
-      content: "▶";
-      display: inline-block;
-      margin-right: 10px;
-      font-size: 0.75em;
-      transition: transform 0.2s ease;
-    }
-
-    details[open] summary::before {
-      transform: rotate(90deg);
-    }
-
-    details p {
-      margin-top: 10px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    @media (min-width: 640px) {
-      .panel {
-        padding: 44px 40px;
-      }
-      h1 {
-        font-size: 2.4rem;
-      }
+    .social-text {
+      font-size: 14px;
+      color: #a0aec0;
+      line-height: 1.45;
+      max-width: 280px;
     }
   </style>
 </head>
 <body>
-  <main>
-    <article class="panel">
-      <header>
-        <p class="brand">DUNKIN’</p>
-        <div class="divider"></div>
-        <h1>Complete Your Registration</h1>
-        <p class="lead">Follow these simple steps to complete your registration for the $100 Dunkin’ offer.</p>
-      </header>
+  <div class="container">
 
-      <ol>
-        <li class="step"><span class="num">1</span>Click on “Claim Now”</li>
-        <li class="step"><span class="num">2</span>Enter your email and basic information</li>
-        <li class="step"><span class="num">3</span>Complete 4–6 sponsored deals</li>
-        <li class="step"><span class="num">4</span>Get your exclusive offer</li>
-      </ol>
+    <!-- Exact logo from your attached image -->
+    <div class="logo-wrap">
+      <svg class="logo-icon" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg">
+        <!-- Left chevron -->
+        <path d="M52 10 
+                 L18 45 
+                 L52 80 
+                 L38 80 
+                 L4 45 
+                 L38 10 
+                 Z" 
+              fill="#0060a9"/>
+        
+        <!-- Right chevron -->
+        <path d="M68 10 
+                 L102 45 
+                 L68 80 
+                 L82 80 
+                 L116 45 
+                 L82 10 
+                 Z" 
+              fill="#0060a9"/>
+      </svg>
+      <div class="logo-text">Sam's Club</div>
+    </div>
 
-      <div class="cta-wrap">
-        <a class="cta" href="https://giftclick.org/aff_c?offer_id=1765&aff_id=145283" rel="nofollow sponsored">CLAIM NOW</a>
-        <p class="note">Eligibility and offer requirements apply. Review the full terms before participating.</p>
+    <h1>Complete Your Registration</h1>
+    <p class="subtitle">Follow these simple steps to claim your Sam's Club gift card reward</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Click on 'Claim Now'</div>
       </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Enter your email and basic info</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">Complete 3-5 sponsored deals</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text">Enjoy your $500 Sam's Club gift card!</div>
+      </div>
+    </div>
 
-      <h2>Frequently Asked Questions</h2>
+    <a href="https://giftclick.org/aff_c?offer_id=4258&aff_id=145283" class="claim-btn">CLAIM NOW</a>
 
-      <details>
-        <summary>How long does it take?</summary>
-        <p>Completion and processing times depend on the sponsored deals selected and the offer’s verification requirements.</p>
-      </details>
+    <p class="disclaimer">By clicking 'Claim Now' you agree to complete the required steps to receive your reward.</p>
 
-      <details>
-        <summary>What are sponsored deals?</summary>
-        <p>Sponsored deals are advertiser offers that may include registrations, purchases, or subscriptions. Check each deal’s terms and any costs before completing it.</p>
-      </details>
+    <!-- Bottom people + social proof -->
+    <div class="social-proof">
+      <div class="avatars">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Shopper">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Shopper">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Shopper">
+      </div>
+      <p class="social-text">Join 12,000+ shoppers who've already claimed their rewards this week only.</p>
+    </div>
 
-      <details>
-        <summary>How many offers do I complete?</summary>
-        <p>Follow the required number of sponsored deals listed on the offer page.</p>
-      </details>
-
-      <details>
-        <summary>When is my reward processed?</summary>
-        <p>Reward processing begins after the required steps have been completed and verified, subject to the offer’s terms.</p>
-      </details>
-    </article>
-  </main>
+  </div>
 </body>
 </html>
