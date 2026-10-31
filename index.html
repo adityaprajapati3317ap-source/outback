@@ -1,239 +1,493 @@
+chipotle
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Complete Your Registration – $500 Sam's Club Gift Card</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Check eligibility and complete the required sponsored deals to qualify for $250 in Chipotle savings.">
+  <meta name="theme-color" content="#AC2318">
+  <title>Claim Your $250 Chipotle Gift Card</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *,::before,::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --red:#AC2318;
+      --red-dark:#8a1c13;
+      --ink:#181818;
+      --muted:#6e6e6e;
+      --line:#e4e4e4;
+      --green:#00b67a;
+      --brown:#441500;
     }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #ffffff;
-      color: #1a1a1a;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 48px 20px;
+    body{
+      min-height:100vh;
+      padding:22px 15px 56px;
+      overflow-x:hidden;
+      background:radial-gradient(circle at 12% 5%,rgba(172,35,24,.05),transparent 28%),
+                 linear-gradient(180deg,#fff 0%,#fafafa 100%);
+      color:var(--ink);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     }
-
-    .container {
-      width: 100%;
-      max-width: 480px;
-      text-align: center;
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:radial-gradient(circle at 88% 74%,rgba(0,0,0,.025),transparent 30%);
     }
-
-    /* Logo */
-    .logo-wrap {
-      margin-bottom: 28px;
+    .page{
+      position:relative;
+      z-index:1;
+      display:flex;
+      max-width:452px;
+      margin:0 auto;
+      flex-direction:column;
+      gap:13px;
     }
-
-    .logo-icon {
-      width: 72px;
-      height: 56px;
-      margin: 0 auto 12px;
-      display: block;
+    .online{
+      display:flex;
+      width:fit-content;
+      margin:0 auto;
+      align-items:center;
+      gap:9px;
+      padding:9px 21px;
+      border:1px solid #e5e5e5;
+      border-radius:999px;
+      background:#fff;
+      box-shadow:0 7px 20px rgba(0,0,0,.07);
+      color:#333;
+      font-size:14px;
+      font-weight:500;
     }
-
-    .logo-text {
-      font-size: 28px;
-      font-weight: 700;
-      color: #0060a9;
-      letter-spacing: -0.5px;
+    .online-dot{
+      width:9px;
+      height:9px;
+      flex-shrink:0;
+      border-radius:50%;
+      background:var(--red);
+      box-shadow:0 0 0 3px rgba(172,35,24,.12),0 0 12px rgba(172,35,24,.24);
     }
-
-    h1 {
-      font-size: 28px;
-      font-weight: 700;
-      color: #2d3748;
-      margin-bottom: 12px;
-      line-height: 1.3;
+    .offer-card{
+      position:relative;
+      overflow:hidden;
+      padding:25px 21px;
+      border:1px solid #e3e3e3;
+      border-radius:24px;
+      background:#fff;
+      box-shadow:0 16px 40px rgba(0,0,0,.09);
     }
-
-    .subtitle {
-      font-size: 16px;
-      color: #718096;
-      line-height: 1.5;
-      margin-bottom: 32px;
-      padding: 0 10px;
+    .offer-card::before{
+      content:"";
+      position:absolute;
+      top:-54px;
+      right:-54px;
+      width:130px;
+      height:130px;
+      border:1px solid rgba(172,35,24,.07);
+      border-radius:50%;
+      box-shadow:0 0 0 22px rgba(172,35,24,.025),0 0 0 44px rgba(172,35,24,.015);
     }
-
-    /* Steps */
-    .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 32px;
+    .brand{
+      position:relative;
+      z-index:1;
+      display:flex;
+      margin-bottom:17px;
+      padding-bottom:17px;
+      flex-direction:column;
+      align-items:center;
+      border-bottom:1px solid #e6e6e6;
+      text-align:center;
     }
-
-    .step {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 50px;
-      padding: 14px 20px;
-      text-align: left;
+    .brand-logo{
+      display:block;
+      width:112px;
+      height:112px;
+      margin-bottom:12px;
+      object-fit:contain;
+      border-radius:50%;
+      filter:drop-shadow(0 8px 12px rgba(34,17,20,.11));
     }
-
-    .step-num {
-      width: 28px;
-      height: 28px;
-      background: #0060a9;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      font-weight: 700;
-      flex-shrink: 0;
+    .brand-copy{
+      color:#454545;
+      font-size:15px;
+      font-weight:400;
+      line-height:1.5;
     }
-
-    .step-text {
-      font-size: 15px;
-      color: #2d3748;
-      font-weight: 500;
+    .brand-copy strong{color:var(--red-dark)}
+    .steps-box{
+      position:relative;
+      z-index:1;
+      overflow:hidden;
+      margin-bottom:20px;
+      border:1px solid #dcdcdc;
+      border-radius:13px;
+      background:#fff;
     }
-
-    /* CTA Button */
-    .claim-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 56px;
-      background: #0060a9;
-      color: white;
-      font-size: 17px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 50px;
-      transition: background 0.2s, transform 0.15s;
-      margin-bottom: 16px;
+    .steps-title{
+      min-height:44px;
+      padding:12px 17px;
+      border-bottom:1px solid #e4e4e4;
+      background:#f7f7f7;
+      color:#222;
+      font-size:14.5px;
+      font-weight:700;
     }
-
-    .claim-btn:hover {
-      background: #004d8c;
-      transform: translateY(-1px);
+    .steps{list-style:none}
+    .steps li{
+      display:flex;
+      align-items:flex-start;
+      gap:13px;
+      padding:13px 17px;
+      border-bottom:1px solid #f1f1f1;
+      color:#181818;
+      font-size:14.5px;
+      line-height:1.45;
     }
-
-    .disclaimer {
-      font-size: 13px;
-      color: #a0aec0;
-      line-height: 1.5;
-      margin-bottom: 36px;
-      padding: 0 8px;
+    .steps li:last-child{border-bottom:none}
+    .step-number{
+      min-width:21px;
+      padding-top:1px;
+      flex-shrink:0;
+      color:var(--red);
+      font-weight:800;
     }
-
-    /* Social proof */
-    .social-proof {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
+    .cta{
+      position:relative;
+      display:block;
+      overflow:hidden;
+      padding:17px;
+      border-radius:50px;
+      background:linear-gradient(180deg,#c42a1e,var(--red-dark));
+      box-shadow:0 7px 20px rgba(172,35,24,.28);
+      color:#fff;
+      text-align:center;
+      text-decoration:none;
+      text-transform:uppercase;
+      font-size:16px;
+      font-weight:800;
+      letter-spacing:1.8px;
+      transition:filter .15s,transform .1s;
+      cursor:pointer;
+      border:none;
+      width:100%;
     }
-
-    .avatars {
-      display: flex;
-      align-items: center;
+    .cta:hover{
+      filter:brightness(.94);
+      transform:translateY(-1px);
     }
-
-    .avatars img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: 2.5px solid #fff;
-      object-fit: cover;
-      margin-left: -10px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    .cta::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      left:-120%;
+      width:48%;
+      background:linear-gradient(108deg,transparent,rgba(255,255,255,.22),transparent);
+      animation:shine 3.8s ease-in-out infinite;
     }
-
-    .avatars img:first-child {
-      margin-left: 0;
+    @keyframes shine{
+      0%,100%{left:-120%;opacity:0}
+      9%{opacity:1}
+      37%{left:140%;opacity:1}
+      45%{left:140%;opacity:0}
     }
-
-    .social-text {
-      font-size: 14px;
-      color: #a0aec0;
-      line-height: 1.45;
-      max-width: 280px;
+    .rating{
+      padding:22px 18px 20px;
+      border:1px solid #e3e3e3;
+      border-radius:21px;
+      background:#fff;
+      box-shadow:0 12px 30px rgba(0,0,0,.07);
+      text-align:center;
+    }
+    .stars{
+      display:flex;
+      justify-content:center;
+      gap:6px;
+      margin-bottom:10px;
+    }
+    .star{
+      display:flex;
+      width:34px;
+      height:34px;
+      align-items:center;
+      justify-content:center;
+      border-radius:5px;
+      background:var(--green);
+      color:#fff;
+      font-size:20px;
+    }
+    .score{
+      margin-bottom:3px;
+      color:#222;
+      font-size:20px;
+      font-weight:800;
+    }
+    .review-count{
+      margin-bottom:8px;
+      color:#777;
+      font-size:13px;
+    }
+    .trustpilot{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      color:#222;
+      font-size:14px;
+      font-weight:700;
+    }
+    .trustpilot-mark{
+      display:flex;
+      width:20px;
+      height:20px;
+      align-items:center;
+      justify-content:center;
+      border-radius:3px;
+      background:var(--green);
+      color:#fff;
+      font-size:13px;
+    }
+    .faq{
+      overflow:hidden;
+      border:1px solid #e3e3e3;
+      border-radius:21px;
+      background:#fff;
+      box-shadow:0 12px 30px rgba(0,0,0,.07);
+    }
+    .faq-title{
+      padding:14px 20px;
+      border-bottom:1px solid #e8e8e8;
+      background:#fafafa;
+      color:var(--red);
+      font-size:10.5px;
+      font-weight:800;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+    .faq-item{border-bottom:1px solid #f0f0f0}
+    .faq-item:last-child{border-bottom:none}
+    .faq-button{
+      display:flex;
+      width:100%;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:16px 20px;
+      border:0;
+      background:none;
+      color:#181818;
+      cursor:pointer;
+      text-align:left;
+      font:600 14.5px/1.3 inherit;
+    }
+    .faq-icon{
+      position:relative;
+      width:20px;
+      height:20px;
+      flex-shrink:0;
+    }
+    .faq-icon::before,
+    .faq-icon::after{
+      content:"";
+      position:absolute;
+      border-radius:2px;
+      background:#999;
+      transition:all .2s;
+    }
+    .faq-icon::before{
+      top:9px;left:3.5px;
+      width:13px;height:1.5px;
+    }
+    .faq-icon::after{
+      top:3.5px;left:9px;
+      width:1.5px;height:13px;
+    }
+    .faq-item.open .faq-icon::after{
+      opacity:0;
+      transform:rotate(90deg);
+    }
+    .faq-answer{
+      display:none;
+      padding:0 20px 15px;
+      color:#666;
+      font-size:13.5px;
+      line-height:1.58;
+    }
+    .faq-item.open .faq-answer{display:block}
+    .footer{
+      padding:17px 14px 4px;
+      text-align:center;
+      color:#777;
+      font-size:11.5px;
+      line-height:1.55;
+    }
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      margin-bottom:8px;
+      color:#2a2022;
+      font-size:13px;
+      font-weight:700;
+    }
+    .footer p+p{margin-top:5px}
+    a:focus-visible,button:focus-visible{
+      outline:3px solid rgba(172,35,24,.35);
+      outline-offset:4px;
+    }
+    .faq-button:focus-visible{outline-offset:-4px}
+    @media(max-width:360px){
+      body{padding-left:12px;padding-right:12px}
+      .offer-card{padding-left:17px;padding-right:17px}
+      .brand-logo{width:98px;height:98px}
+      .steps li{padding-left:13px;padding-right:13px;gap:10px}
+      .star{width:32px;height:32px}
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <main class="page">
 
-    <!-- Exact logo from your attached image -->
-    <div class="logo-wrap">
-      <svg class="logo-icon" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg">
-        <!-- Left chevron -->
-        <path d="M52 10 
-                 L18 45 
-                 L52 80 
-                 L38 80 
-                 L4 45 
-                 L38 10 
-                 Z" 
-              fill="#0060a9"/>
-        
-        <!-- Right chevron -->
-        <path d="M68 10 
-                 L102 45 
-                 L68 80 
-                 L82 80 
-                 L116 45 
-                 L82 10 
-                 Z" 
-              fill="#0060a9"/>
-      </svg>
-      <div class="logo-text">Sam's Club</div>
+    <!-- Online counter -->
+    <div class="online">
+      <span class="online-dot"></span>
+      <span id="online-count">817</span> online now
     </div>
 
-    <h1>Complete Your Registration</h1>
-    <p class="subtitle">Follow these simple steps to claim your Sam's Club gift card reward</p>
+    <!-- Main offer card -->
+    <section class="offer-card">
+      <div class="brand">
+        <!-- Your uploaded Chipotle logo -->
+        <img class="brand-logo" src="chipotle-logo.png" alt="Chipotle">
+        <!-- Note: full base64 is long – for production replace the src with the actual image file path or host the logo -->
 
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-text">Click on 'Claim Now'</div>
+        <p class="brand-copy">
+          Complete the steps below to claim your<br>
+          <strong>$250 Chipotle gift card</strong>
+        </p>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-text">Enter your email and basic info</div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-text">Complete 3-5 sponsored deals</div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-text">Enjoy your $500 Sam's Club gift card!</div>
-      </div>
-    </div>
 
-    <a href="https://giftclick.org/aff_c?offer_id=4258&aff_id=145283" class="claim-btn">CLAIM NOW</a>
-
-    <p class="disclaimer">By clicking 'Claim Now' you agree to complete the required steps to receive your reward.</p>
-
-    <!-- Bottom people + social proof -->
-    <div class="social-proof">
-      <div class="avatars">
-        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Shopper">
-        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Shopper">
-        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Shopper">
+      <div class="steps-box">
+        <div class="steps-title">Steps to Qualify</div>
+        <ul class="steps">
+          <li>
+            <span class="step-number">1.</span>
+            <span>Click on “Claim Now”</span>
+          </li>
+          <li>
+            <span class="step-number">2.</span>
+            <span>Enter your email and basic information</span>
+          </li>
+          <li>
+            <span class="step-number">3.</span>
+            <span>Complete 4–5 sponsored deals (required)</span>
+          </li>
+          <li>
+            <span class="step-number">4.</span>
+            <span>Claim your $250 Chipotle gift card</span>
+          </li>
+        </ul>
       </div>
-      <p class="social-text">Join 12,000+ shoppers who've already claimed their rewards this week only.</p>
-    </div>
 
-  </div>
+      <!-- CTA – real URL never shows on hover -->
+      <button class="cta" id="claimBtn" type="button">CLAIM NOW</button>
+    </section>
+
+    <!-- Trustpilot rating -->
+    <section class="rating">
+      <div class="stars" aria-hidden="true">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="score">4.9 out of 5</div>
+      <div class="review-count">Based on 2,369 reviews</div>
+      <div class="trustpilot">
+        <span class="trustpilot-mark" aria-hidden="true">★</span>
+        Trustpilot
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="faq-title" id="faq-heading">Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-button" type="button" aria-expanded="false">
+          Who is this offer for?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer">
+          Eligibility depends on the promotion partner’s current requirements. Review the terms shown on the next page before participating.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-button" type="button" aria-expanded="false">
+          How much can I save?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer">
+          Eligible participants may qualify for a $250 Chipotle gift card after completing the stated requirements.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-button" type="button" aria-expanded="false">
+          What are sponsored deals?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer">
+          Sponsored deals are third-party offers that may include trials, subscriptions, purchases, or app activities. Each deal shows its own terms and any cost before you choose it.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-button" type="button" aria-expanded="false">
+          How many deals do I need to complete?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-answer">
+          The promotion typically requires completing 4–5 qualifying deals. The exact rules appear on the partner’s eligibility page.
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-brand">
+        <span>Chipotle Reward</span>
+      </div>
+      <p>© 2026 Chipotle Reward. All rights reserved.</p>
+      <p>Offer availability and eligibility are subject to the promotion partner’s requirements and terms. Review all details before participating.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Online counter that fluctuates
+    (function updateOnlineCount(){
+      var counter = document.getElementById('online-count');
+      var current = Number(counter.textContent) || 817;
+      var change = Math.floor(Math.random() * 7) - 3;
+      counter.textContent = Math.min(893, Math.max(776, current + change));
+      window.setTimeout(updateOnlineCount, 3600 + Math.random() * 5400);
+    }());
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(function(item){
+      var button = item.querySelector('.faq-button');
+      button.addEventListener('click', function(){
+        var expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!expanded));
+        item.classList.toggle('open', !expanded);
+      });
+    });
+
+    // CTA – redirects without ever showing the real URL on hover
+    document.getElementById('claimBtn').addEventListener('click', function(){
+      window.location.href = 'https://linkthem.net/?offer_id=1725&aff_id=145283';
+    });
+  </script>
 </body>
 </html>
